@@ -1,55 +1,44 @@
-/* ===========================
-   RESET
-   =========================== */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===========================
-   BODY & BACKGROUND
-   =========================== */
+/* Body */
 body {
   font-family: Arial, sans-serif;
-  min-height: 100vh;
-  background-image: url("images/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;   /* show top on mobile */
-  background-attachment: scroll;     /* fix mobile */
-}
+  height: 100vh;
 
+  /* Background image */
+  background-image: url("images/background.jpg");
+  background-size: cover;      /* makes it cover whole screen */
+  background-repeat: no-repeat;
+  background-position: center; /* center the image */
+}
 /* About page background */
 body.about-page {
-  background-image: url("images/about-background.jpg");
+  background-image: url("images/about-background.jpg"); /* About page background */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
-  background-attachment: scroll;
+  background-position: center;
 }
-
 /* Lessons page background */
 body.lessons-page {
-  background-image: url("images/lessons-background.jpg");
+  background-image: url("images/lessons-background.jpg"); /* Lessons page image */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
-  background-attachment: scroll;
+  background-position: center;
 }
-
 /* Quiz page background */
 body.quiz-page {
-  background-image: url("images/quiz-background.jpg");
+  background-image: url("images/quiz-background.jpg"); /* Quiz page image */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
-  background-attachment: scroll;
+  background-position: center;
 }
 
-/* ===========================
-   NAVIGATION BAR
-   =========================== */
+/* Navigation bar */
 nav {
   position: fixed;
   top: 0;
@@ -60,7 +49,6 @@ nav {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
-  z-index: 10;
 }
 
 nav a {
@@ -71,34 +59,29 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #3498db;
+  background-color: #3498db;  /* brighter blue */
   color: #fff;
-  transform: scale(1.05);
-  transition: all 0.2s ease;
+  transform: scale(1.05);     /* slight grow effect */
+  transition: all 0.2s ease;  /* smooth transition */
 }
 
-/* ===========================
-   MAIN CONTENT
-   =========================== */
+/* Main content wrapper */
 .main-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%; /* fixes overflow on phones */
+  top: 50%;               
+  left: 50%;              
+  transform: translate(-50%, -50%); /* perfect vertical & horizontal center */
 }
 
-/* ===========================
-   CONTENT BOX
-   =========================== */
+/* Content box */
 .content-box {
   max-width: 400px;       /* small width for text */
-  width: 90%;             /* shrink on mobile */
   background-color: #ecf0f1;
   padding: 30px;
   border-radius: 8px;
 }
 
+/* Text inside box */
 .content-box h1 {
   font-size: 36px;
   color: #2c3e50;
@@ -113,9 +96,7 @@ nav a:hover {
   text-align: left;
 }
 
-/* ===========================
-   BUTTON
-   =========================== */
+/* Button */
 button {
   padding: 14px 24px;
   font-size: 16px;
@@ -129,62 +110,14 @@ button {
 button:hover {
   background-color: #2980b9;
 }
-
-/* ===========================
-   SIGNATURE
-   =========================== */
+/* Signature at bottom-left */
 .signature {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  color: #ecf0f1;
+  position: fixed;       /* stays in place even on scroll */
+  bottom: 10px;          /* distance from bottom */
+  left: 10px;            /* distance from left edge */
+  color: #ecf0f1;        /* light color to stand out on dark nav */
   font-size: 14px;
   font-style: italic;
-  pointer-events: none;
-  z-index: 10;
+  pointer-events: none;  /* doesn’t interfere with clicks */
 }
 
-/* ===========================
-   MOBILE FIXES
-   =========================== */
-@media (max-width: 768px) {
-
-  /* Navigation becomes top bar */
-  nav {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 10px 0;
-  }
-
-  nav a {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  /* Main content moves below nav */
-  .main-content {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-  }
-
-  /* Center text on mobile */
-  .content-box h1,
-  .content-box p {
-    text-align: center;
-  }
-
-  button {
-    width: 100%;
-  }
-
-  /* Signature at bottom for mobile */
-  .signature {
-    position: relative;
-    text-align: center;
-    margin-top: 20px;
-  }
