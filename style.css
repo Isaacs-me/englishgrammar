@@ -8,7 +8,7 @@
 /* Body */
 body {
   font-family: Arial, sans-serif;
-  height: 100vh;
+ min-height: 100vh;
 
   /* Background image */
   background-image: url("background.jpg");
@@ -71,11 +71,13 @@ nav a:hover {
   top: 50%;               
   left: 50%;              
   transform: translate(-50%, -50%); /* perfect vertical & horizontal center */
+  width: 100%
 }
 
 /* Content box */
 .content-box {
   max-width: 400px;       /* small width for text */
+  width: 90%
   background-color: #ecf0f1;
   padding: 30px;
   border-radius: 8px;
@@ -121,3 +123,50 @@ button:hover {
   pointer-events: none;  /* doesn’t interfere with clicks */
 
 }
+/* =======================
+   MOBILE FIX
+   ======================= */
+@media (max-width: 768px) {
+
+  /* Navigation becomes top bar */
+  nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+
+  nav a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Main content moves below nav */
+  .main-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 40px;
+  }
+
+  /* Center text on mobile */
+  .content-box h1,
+  .content-box p {
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  /* Signature stays visible */
+  .signature {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+
