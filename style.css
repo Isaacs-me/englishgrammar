@@ -1,44 +1,55 @@
-/* Reset */
+/* ===========================
+   RESET
+   =========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* ===========================
+   BODY & BACKGROUND
+   =========================== */
 body {
   font-family: Arial, sans-serif;
- min-height: 100vh;
-
-  /* Background image */
-  background-image: url("background.jpg");
-  background-size: cover;      /* makes it cover whole screen */
+  min-height: 100vh;
+  background-image: url("images/background.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; /* center the image */
+  background-position: top center;   /* show top on mobile */
+  background-attachment: scroll;     /* fix mobile */
 }
+
 /* About page background */
 body.about-page {
-  background-image: url("about-background.jpg"); /* About page background */
+  background-image: url("images/about-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-}
-/* Lessons page background */
-body.lessons-page {
-  background-image: url("lessons-background.jpg"); /* Lessons page image */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-/* Quiz page background */
-body.quiz-page {
-  background-image: url("quiz-background.jpg"); /* Quiz page image */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
+  background-attachment: scroll;
 }
 
-/* Navigation bar */
+/* Lessons page background */
+body.lessons-page {
+  background-image: url("images/lessons-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: scroll;
+}
+
+/* Quiz page background */
+body.quiz-page {
+  background-image: url("images/quiz-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: scroll;
+}
+
+/* ===========================
+   NAVIGATION BAR
+   =========================== */
 nav {
   position: fixed;
   top: 0;
@@ -49,6 +60,7 @@ nav {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
+  z-index: 10;
 }
 
 nav a {
@@ -59,31 +71,34 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #3498db;  /* brighter blue */
+  background-color: #3498db;
   color: #fff;
-  transform: scale(1.05);     /* slight grow effect */
-  transition: all 0.2s ease;  /* smooth transition */
+  transform: scale(1.05);
+  transition: all 0.2s ease;
 }
 
-/* Main content wrapper */
+/* ===========================
+   MAIN CONTENT
+   =========================== */
 .main-content {
   position: absolute;
-  top: 50%;               
-  left: 50%;              
-  transform: translate(-50%, -50%); /* perfect vertical & horizontal center */
-  width: 100%
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* fixes overflow on phones */
 }
 
-/* Content box */
+/* ===========================
+   CONTENT BOX
+   =========================== */
 .content-box {
   max-width: 400px;       /* small width for text */
-  width: 90%
+  width: 90%;             /* shrink on mobile */
   background-color: #ecf0f1;
   padding: 30px;
   border-radius: 8px;
 }
 
-/* Text inside box */
 .content-box h1 {
   font-size: 36px;
   color: #2c3e50;
@@ -98,7 +113,9 @@ nav a:hover {
   text-align: left;
 }
 
-/* Button */
+/* ===========================
+   BUTTON
+   =========================== */
 button {
   padding: 14px 24px;
   font-size: 16px;
@@ -112,20 +129,24 @@ button {
 button:hover {
   background-color: #2980b9;
 }
-/* Signature at bottom-left */
+
+/* ===========================
+   SIGNATURE
+   =========================== */
 .signature {
-  position: fixed;       /* stays in place even on scroll */
-  bottom: 10px;          /* distance from bottom */
-  left: 10px;            /* distance from left edge */
-  color: #ecf0f1;        /* light color to stand out on dark nav */
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  color: #ecf0f1;
   font-size: 14px;
   font-style: italic;
-  pointer-events: none;  /* doesn’t interfere with clicks */
-
+  pointer-events: none;
+  z-index: 10;
 }
-/* =======================
-   MOBILE FIX
-   ======================= */
+
+/* ===========================
+   MOBILE FIXES
+   =========================== */
 @media (max-width: 768px) {
 
   /* Navigation becomes top bar */
@@ -149,7 +170,6 @@ button:hover {
     top: auto;
     left: auto;
     transform: none;
-    margin-top: 40px;
   }
 
   /* Center text on mobile */
@@ -162,11 +182,9 @@ button:hover {
     width: 100%;
   }
 
-  /* Signature stays visible */
+  /* Signature at bottom for mobile */
   .signature {
     position: relative;
     text-align: center;
     margin-top: 20px;
   }
-
-
