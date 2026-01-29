@@ -1,0 +1,122 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+
+  /* Background image */
+  background-image: url("images/background.jpg");
+  background-size: cover;      /* makes it cover whole screen */
+  background-repeat: no-repeat;
+  background-position: center; /* center the image */
+}
+/* About page background */
+body.about-page {
+  background-image: url("images/about-background.jpg"); /* About page background */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Lessons page background */
+body.lessons-page {
+  background-image: url("images/lessons-background.jpg"); /* Lessons page image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Quiz page background */
+body.quiz-page {
+  background-image: url("images/quiz-background.jpg"); /* Quiz page image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Navigation bar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 16px;
+}
+
+nav a:hover {
+  background-color: #3498db;  /* brighter blue */
+  color: #fff;
+  transform: scale(1.05);     /* slight grow effect */
+  transition: all 0.2s ease;  /* smooth transition */
+}
+
+/* Main content wrapper */
+.main-content {
+  position: absolute;
+  top: 50%;               
+  left: 50%;              
+  transform: translate(-50%, -50%); /* perfect vertical & horizontal center */
+}
+
+/* Content box */
+.content-box {
+  max-width: 400px;       /* small width for text */
+  background-color: #ecf0f1;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+/* Text inside box */
+.content-box h1 {
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.content-box p {
+  font-size: 18px;
+  color: #34495e;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Button */
+button {
+  padding: 14px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+/* Signature at bottom-left */
+.signature {
+  position: fixed;       /* stays in place even on scroll */
+  bottom: 10px;          /* distance from bottom */
+  left: 10px;            /* distance from left edge */
+  color: #ecf0f1;        /* light color to stand out on dark nav */
+  font-size: 14px;
+  font-style: italic;
+  pointer-events: none;  /* doesn’t interfere with clicks */
+}
