@@ -11,28 +11,28 @@ body {
   height: 100vh;
 
   /* Background image */
-  background-image: url("images/background.jpg");
+  background-image: url("background.jpg");
   background-size: cover;      /* makes it cover whole screen */
   background-repeat: no-repeat;
   background-position: center; /* center the image */
 }
 /* About page background */
 body.about-page {
-  background-image: url("images/about-background.jpg"); /* About page background */
+  background-image: url("about-background.jpg"); /* About page background */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 /* Lessons page background */
 body.lessons-page {
-  background-image: url("images/lessons-background.jpg"); /* Lessons page image */
+  background-image: url("lessons-background.jpg"); /* Lessons page image */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 /* Quiz page background */
 body.quiz-page {
-  background-image: url("images/quiz-background.jpg"); /* Quiz page image */
+  background-image: url("quiz-background.jpg"); /* Quiz page image */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -249,6 +249,7 @@ button:hover {
   background-color: rgba(0, 200, 150, 0.2);
   color: #00c896;
 }
+
 
 
 
