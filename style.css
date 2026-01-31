@@ -11,28 +11,28 @@ body {
   height: 100vh;
 
   /* Background image */
-  background-image: url("background.jpg");
+  background-image: url("images/background.jpg");
   background-size: cover;      /* makes it cover whole screen */
   background-repeat: no-repeat;
   background-position: center; /* center the image */
 }
 /* About page background */
 body.about-page {
-  background-image: url("about-background.jpg"); /* About page background */
+  background-image: url("images/about-background.jpg"); /* About page background */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 /* Lessons page background */
 body.lessons-page {
-  background-image: url("lessons-background.jpg"); /* Lessons page image */
+  background-image: url("images/lessons-background.jpg"); /* Lessons page image */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 /* Quiz page background */
 body.quiz-page {
-  background-image: url("quiz-background.jpg"); /* Quiz page image */
+  background-image: url("images/quiz-background.jpg"); /* Quiz page image */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -120,6 +120,137 @@ button:hover {
   font-style: italic;
   pointer-events: none;  /* doesn’t interfere with clicks */
 }
+/* =========================
+   LESSONS PAGE ONLY
+========================= */
+
+/* Lessons page base */
+.lessons-page {
+  min-height: 100vh;
+  background: #111;
+  color: white;
+}
+
+/* WRAPPER to push content right of left nav */
+.lessons-wrapper {
+  margin-left: 200px;
+  padding: 20px;
+  max-width: calc(100% - 200px);
+  box-sizing: border-box;
+}
+
+/* Top menu */
+.top-menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  position: relative;
+  z-index: 1;
+}
+
+.top-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.top-menu a.active {
+  border-bottom: 2px solid #00c896;
+}
+
+/* Lessons container */
+.lessons-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0;
+  margin-top: 30px; /* ← slightly more down */
+}
+
+/* Lesson cards – IMAGE ONLY */
+.lesson-card {
+  height: 240px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Hover effect – subtle, clean */
+.lesson-card:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+/* Click effect */
+.lesson-card:active {
+  transform: scale(0.98);
+}
+
+/* VERY LIGHT overlay (only for text readability) */
+.lesson-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25); /* light – image still visible */
+  border-radius: 12px;
+  z-index: 0;
+}
+
+/* Text above overlay */
+.lesson-card h2,
+.lesson-card p {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+/* Card images */
+.lesson-card.beginner { background-image: url("images/beginner.jpg"); }
+.lesson-card.elementary { background-image: url("images/elementary.jpg"); }
+.lesson-card.pre-intermediate { background-image: url("images/pre-intermediate.jpg"); }
+.lesson-card.intermediate { background-image: url("images/intermediate.jpg"); }
+.lesson-card.upper-intermediate { background-image: url("images/upper-intermediate.jpg"); }
+.lesson-card.advanced { background-image: url("images/advanced.jpg"); }
+
+/* Bottom menu */
+.bottom-menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.bottom-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.bottom-menu a:hover,
+.bottom-menu a.active {
+  background-color: rgba(0, 200, 150, 0.2);
+  color: #00c896;
+}
+
+
 
 
 
