@@ -219,12 +219,12 @@ button:hover {
 }
 
 /* Card images */
-.lesson-card.beginner { background-image: url("images/beginner.jpg"); }
-.lesson-card.elementary { background-image: url("images/elementary.jpg"); }
-.lesson-card.pre-intermediate { background-image: url("images/pre-intermediate.jpg"); }
-.lesson-card.intermediate { background-image: url("images/intermediate.jpg"); }
-.lesson-card.upper-intermediate { background-image: url("images/upper-intermediate.jpg"); }
-.lesson-card.advanced { background-image: url("images/advanced.jpg"); }
+.lesson-card.beginner { background-image: url("beginner.jpg"); }
+.lesson-card.elementary { background-image: url("elementary.jpg"); }
+.lesson-card.pre-intermediate { background-image: url("pre-intermediate.jpg"); }
+.lesson-card.intermediate { background-image: url("intermediate.jpg"); }
+.lesson-card.upper-intermediate { background-image: url("upper-intermediate.jpg"); }
+.lesson-card.advanced { background-image: url("advanced.jpg"); }
 
 /* Bottom menu */
 .bottom-menu {
@@ -249,6 +249,7 @@ button:hover {
   background-color: rgba(0, 200, 150, 0.2);
   color: #00c896;
 }
+
 
 
 
